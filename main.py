@@ -8,12 +8,10 @@ def longest(s):
     for c in s:
         if c not in substring:
             substring = substring + c
-            print(substring)
             length = max(length, len(substring))
 
         else:
             substring = substring.split(c)[1] + c    
-            print(substring)
 
     return 'Longest substring is: ' + str(length)
 
